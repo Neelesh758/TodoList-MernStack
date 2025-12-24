@@ -7,7 +7,7 @@ import { FaCheckCircle } from "react-icons/fa";
 import { toast } from 'react-toastify';
 
 import axios from 'axios';
-import Footer from '../components/footer';
+import Footer from '../components/Footer.jsx';
 
 function TodoList() {
   const [popup , setPopup] =useState(false)

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'
-import Footer from '../../components/footer'
+import Footer from '../../components/Footer.jsx'
 import { IoArrowBackCircleSharp } from "react-icons/io5";
 import { toast } from 'react-toastify';
 import axios from "axios";

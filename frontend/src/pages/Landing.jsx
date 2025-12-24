@@ -2,7 +2,7 @@ import React from 'react'
 import Logo from '../assets/icons8-what-i-do-94.png'
 import HeroImg from '../assets/hero.png'
 import { Link } from 'react-router-dom'
-import Footer from '../components/footer'
+import Footer from '../components/Footer.jsx'
 // import Footer from '../components/Footer.jsx'
 
 function Landing() {
