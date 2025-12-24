@@ -40,6 +40,7 @@ function Navbar() {
       <div className='hidden font-bold font-serif text-lg md:flex gap-5'>
         <Link to="/home">Home</Link>
         <Link to="/todolist">Todo List</Link>
+        <Link to="/about">About</Link>
         <button onClick={handleLogout}>Logout</button>
       </div>
       {/* Mobile menu */}
