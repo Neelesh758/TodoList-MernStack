@@ -32,7 +32,7 @@ function AddTodo() {
         return;
       }
       const data = {title,description,createdBy}
-      const res = await axios.post("/api/v1/todo/create",
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/todo/create`,
         data,
         {
           headers :{

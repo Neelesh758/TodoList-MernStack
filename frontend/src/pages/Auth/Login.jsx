@@ -17,7 +17,7 @@ function Login() {
       if(!email || !password){
         console.log("error")
       }
-      const res = await axios.post("/api/v1/user/login",{
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/user/login`,{
         email,
         password
       })

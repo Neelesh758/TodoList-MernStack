@@ -30,7 +30,7 @@ function TodoList() {
         toast.error("Please Login Again");
         return ;
       }
-      const res = await axios.get("/api/v1/todo/get",{
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/todo/get`,{
         headers:{
           Authorization: `Bearer ${token}`
         }
@@ -62,7 +62,7 @@ function TodoList() {
         return ;
       }
       
-      const res = await axios.delete(`/api/v1/todo/delete/${id}`,{
+      const res = await axios.delete(`${import.meta.env.VITE_API_URL}/api/v1/todo/delete/${id}`,{
         headers:{
           Authorization: `Bearer ${token}`
         }
@@ -88,7 +88,7 @@ function TodoList() {
         toast.error("Please Login Again");
         return ;
       }
-      const res = await axios.put(`/api/v1/todo/update/${id}`,{
+      const res = await axios.put(`${import.meta.env.VITE_API_URL}/api/v1/todo/update/${id}`,{
         isCompleted: !currentStatus
       },
         {
@@ -97,7 +97,7 @@ function TodoList() {
         }
       })
       if(res.data.success){
-        console.log("Deleted Successfully")
+        console.log("Successfully")
         toast.success(!currentStatus ? "Task marked as completed" : "Task marked as pending");
         getTodos()
       }
@@ -125,7 +125,7 @@ function TodoList() {
         toast.error("Please Login Again");
         return ;
       }
-      const res = await axios.put(`/api/v1/todo/update/${editId}`,
+      const res = await axios.put(`${import.meta.env.VITE_API_URL}/api/v1/todo/update/${editId}`,
         {
           title,
           description,

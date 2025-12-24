@@ -19,7 +19,7 @@ function Register() {
       if(!email || !password || !userName){
         console.log("error")
       }
-      const res = await axios.post("/api/v1/user/register",{
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/user/register`,{
         userName,
         password,
         email
